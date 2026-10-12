@@ -1,10 +1,10 @@
 # The Last Evidence Standing
 
-<p align="center"><img src="branding/BEACON_SEAL.svg" alt="Beacon of the Eagle LLC editorial seal" width="155" /></p>
+<p align="center"><img src="branding/BEACON_OFFICIAL.svg" alt="Beacon of the Eagle LLC editorial seal" width="155" /></p>
 <p align="center"><strong>BEACON OF THE EAGLE LLC</strong> · <strong>CENTINELL SUITE DEFENSE</strong><br/>Original Synthetic DFIR Training Laboratory · Case 26-NB-0918</p>
 
 
-**Version 1.2 | HTB Sherlock candidate · Advanced DFIR / Network Forensics · Target difficulty: Insane**
+**Branding update v1.4 (binary evidence upload pending) | HTB Sherlock candidate · Advanced DFIR / Network Forensics · Target difficulty: Insane**
 
 > An expert attacker erased critical forensic traces after a network breach. Investigators must correlate fragmented logs, recover hidden evidence, reconstruct the attack timeline, and prove what happened.
 
@@ -16,7 +16,7 @@ At **fictional Northbridge Systems**, investigators confront a legitimate mainte
 
 ## Student start
 
-1. Obtain the v1.2 student ZIP from the author while binary upload is pending. Only use GitHub downloads once the binary upload is verified.
+1. Obtain the student ZIP v1.4 from the author while GitHub binary upload is pending. Only use GitHub downloads once the binary upload is verified.
 2. Follow `docs/CASE_BRIEF.md`, `docs/EVIDENCE_HANDLING.md`, and [30 investigation tasks](questions/INVESTIGATION.md).
 3. Verify exhibit SHA-256 hashes and the detached Ed25519 signature before drawing conclusions.
 4. Keep original evidence immutable and report trace IDs and normalized UTC.
@@ -51,7 +51,7 @@ Created for ethical forensic education by **Centinell Suite Defense**. This trai
 ## Reviewer and publisher controls
 
 - Branded student case dossier (PDF) is distributed inside the reviewed student ZIP.
-- [Beacon publisher seal](branding/BEACON_SEAL.svg) — editorial authorship mark, not a cryptographic signature.
+- [Beacon publisher seal](branding/BEACON_OFFICIAL.svg) — editorial authorship mark, not a cryptographic signature.
 
 **Seal distinction:** The Beacon mark identifies the publisher. It does not certify source evidence or prove an investigation conclusion. Exhibit integrity is assessed independently using the hash manifest and synthetic Ed25519 witness key.
 
@@ -77,3 +77,7 @@ Read the [narrative](docs/SCENARIO_STORY.md), [network diagram](docs/NETWORK_DIA
 
 ## Binary publication status
 Text-based material and synthetic logs are published. Binary exhibits, PDF and student ZIP must still be uploaded. **Do not submit as a complete GitHub download yet.** See [upload guide](docs/GITHUB_BINARY_UPLOAD.md). Instructor materials are excluded.
+
+
+### Corporate image attribution
+The emblem above is the **official image supplied by Beacon of the Eagle LLC** (white eagle, lighthouse, ocean and gold ring). The original PNG is embedded losslessly in `branding/BEACON_OFFICIAL.svg` for display in this text-only GitHub publication. The complete v1.4 ZIP also contains the unchanged original `branding/BEACON_SEAL.png`.
