@@ -4,7 +4,7 @@
 <p align="center"><strong>BEACON OF THE EAGLE LLC</strong> · <strong>CENTINELL SUITE DEFENSE</strong><br/>Original Synthetic DFIR Training Laboratory · Case 26-NB-0918</p>
 
 
-**Branding update v1.4 (binary evidence upload pending) | HTB Sherlock candidate · Advanced DFIR / Network Forensics · Target difficulty: Insane**
+**QA-corrected v1.5 (binary evidence upload pending) | HTB Sherlock candidate · Advanced DFIR / Network Forensics · Target difficulty: Insane**
 
 > An expert attacker erased critical forensic traces after a network breach. Investigators must correlate fragmented logs, recover hidden evidence, reconstruct the attack timeline, and prove what happened.
 
@@ -16,7 +16,7 @@ At **fictional Northbridge Systems**, investigators confront a legitimate mainte
 
 ## Student start
 
-1. Obtain the student ZIP v1.4 from the author while GitHub binary upload is pending. Only use GitHub downloads once the binary upload is verified.
+1. Obtain the student ZIP v1.5 from the author while GitHub binary upload is pending. Only use GitHub downloads once the binary upload is verified.
 2. Follow `docs/CASE_BRIEF.md`, `docs/EVIDENCE_HANDLING.md`, and [30 investigation tasks](questions/INVESTIGATION.md).
 3. Verify exhibit SHA-256 hashes and the detached Ed25519 signature before drawing conclusions.
 4. Keep original evidence immutable and report trace IDs and normalized UTC.
