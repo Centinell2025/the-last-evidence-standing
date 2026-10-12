@@ -1,0 +1,4 @@
+event_utc,sensor_id,client_ip,qname,rtype,answer_ip,rcode
+2026-09-18T01:10:11Z,nb-sensor-02,10.24.12.45,updates-nb.example,A,203.0.113.15,NOERROR
+2026-09-18T01:19:58Z,nb-sensor-02,10.24.18.22,evidence-bridge.example,A,198.51.100.77,NOERROR
+2026-09-18T01:20:39Z,nb-sensor-02,10.24.18.22,updates-nb.example,A,203.0.113.15,NOERROR

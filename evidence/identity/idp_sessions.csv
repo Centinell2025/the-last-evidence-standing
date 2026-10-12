@@ -1,0 +1,5 @@
+event_utc,session_id,principal,source_ip,device_label,device_cert_fingerprint,challenge,result
+2026-09-18T01:10:14Z,sess-allow-02,NB\svc_archive,10.24.12.45,nb-backup-01,SHA256:77A1-APPROVED-BACKUP,workload certificate,pass
+2026-09-18T01:14:46Z,sess-72bf,NB\svc_archive,192.0.2.51,nb-jump-03,SHA256:9B3E-UNENROLLED,workload certificate,pass
+2026-09-18T01:18:21Z,sess-72bf,NB\svc_archive,192.0.2.51,nb-jump-03,SHA256:9B3E-UNENROLLED,session refresh,pass
+2026-09-18T01:24:55Z,sess-72bf,NB\svc_archive,192.0.2.51,nb-jump-03,SHA256:9B3E-UNENROLLED,revoke,pass

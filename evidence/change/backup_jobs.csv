@@ -1,0 +1,4 @@
+run_id,event_utc,worker,principal,ticket_id,operation,path,status
+bk-4281,2026-09-18T01:10:23Z,nb-backup-01,NB\svc_archive,CHG-2871,backup-index-rebuild,/srv/index/catalog.sqlite,started
+bk-4281,2026-09-18T01:22:40Z,nb-backup-01,NB\svc_archive,CHG-2871,backup-index-rebuild,/srv/index/catalog.sqlite,success
+bk-4280,2026-09-18T00:59:44Z,nb-backup-01,NB\svc_archive,CHG-2868,backup-index-rebuild,/srv/index/catalog.sqlite,success

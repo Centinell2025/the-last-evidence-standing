@@ -1,0 +1,5 @@
+event_utc,principal,token_id,session_id,source_ip,client_claim,auth_mechanism,scope,outcome
+2026-09-18T01:10:18Z,NB\svc_archive,tok-0a12,sess-allow-02,10.24.12.45,nb-backup-01,mTLS-workload,archive.index:write,issued
+2026-09-18T01:14:50Z,NB\svc_archive,tok-6f92,sess-72bf,192.0.2.51,nb-jump-03,mTLS-workload,archive.index:write archive.data:read,issued
+2026-09-18T01:24:55Z,NB\svc_archive,tok-6f92,sess-72bf,192.0.2.51,nb-jump-03,mTLS-workload,archive.data:read,revoked
+2026-09-18T01:32:08Z,NB\svc_monitor,tok-2b32,sess-health-04,10.24.10.16,nb-monitor-01,mTLS-workload,telemetry:read,issued

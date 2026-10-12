@@ -1,0 +1,5 @@
+scan_utc,asset,path,size_bytes,sha256,scan_id,note
+2026-09-18T01:16:36Z,nb-dfs-02,/var/tmp/.cache/diag-bundle-0918.tgz,29827,245aa54460833d0e51f647888855f710e91e5981862aad3556a125715b2492e1,fim-488,spool inventory
+2026-09-18T01:24:27Z,nb-dfs-02,/etc/nb-collector/forwarding.yml,81,e8466e1a48c8c3ac4970a2f2c37d5d1c88811157cf64467d06540f647aac1073,fim-489,post change scan
+2026-09-18T01:24:59Z,nb-dfs-02,/var/log/nb-collector/forwarded.log,31128,d65c3d75a2a048964a1a5088af3c20be71a18d572b6fa2a4ed0b7a7b3a70ee19,fim-490,pre truncate scan
+2026-09-18T01:25:04Z,nb-dfs-02,/var/log/nb-collector/forwarded.log,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,fim-491,independent FIM scan after file-size collapse

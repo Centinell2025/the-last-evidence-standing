@@ -1,0 +1,8 @@
+INSTRUCTOR_PRIVATE/
+__pycache__/
+*.pyc
+.env
+.venv/
+*.pem.private
+private/
+# Do not commit instructor solutions, private keys, or generated submissions.
