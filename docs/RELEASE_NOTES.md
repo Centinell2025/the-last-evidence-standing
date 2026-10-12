@@ -1,4 +1,4 @@
-# Student release notes — v1.4
+# Student release notes — v1.5
 
 Published by **Beacon of the Eagle LLC / Centinell Suite Defense**.
 
@@ -10,3 +10,10 @@ Published by **Beacon of the Eagle LLC / Centinell Suite Defense**.
 
 ## Branding revision v1.4
 The author-supplied original Beacon of the Eagle LLC logo replaces the earlier illustrative emblem. The exact input PNG is preserved under `branding/BEACON_SEAL.png`. Branding changes do not alter synthetic forensic artifacts, cryptographic witness bytes or grading.
+
+## QA packaging correction v1.5
+- Added a root README.md inside the learner ZIP, matching the PDF quick start.
+- Rebuilt the student ZIP inside the repository from the same current v1.5 student contents.
+- Removed an obsolete placeholder SVG from nested release archives.
+- Updated the PDF footer from v1.2 to v1.5.
+- Version labels, manifests and release checks synchronized; forensic exhibit bytes unchanged.
