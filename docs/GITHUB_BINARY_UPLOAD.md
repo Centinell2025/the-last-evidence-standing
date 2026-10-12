@@ -1,4 +1,4 @@
-# Publish the remaining binary exhibits — v1.4
+# Publish the remaining binary exhibits — v1.5
 
 The public repository now includes the full text investigation, forensic CSVs, 30 questions, integrity manifest, validation tools, and the Beacon of the Eagle LLC SVG seal.
 
@@ -17,3 +17,5 @@ python3 tools/verify_release.py downloads/The-Last-Evidence-Standing-STUDENT.zip
 Do not publish the confidential instructor archive, examiner writeup, grading key or author-only materials.
 
 Publisher: **Beacon of the Eagle LLC** — Centinell Suite Defense.
+
+The v1.5 standalone student ZIP and the nested `downloads/` ZIP have identical bytes; the student package has a root `README.md`. Nine binary uploads remain necessary for full GitHub publication.
