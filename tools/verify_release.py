@@ -24,5 +24,5 @@ for item in sys.argv[1:]:
    assert z.read(prefix+'manifest/SHA256SUMS.txt')==(R/'manifest/SHA256SUMS.txt').read_bytes()
    for name, sha in expected.items():
     assert hashlib.sha256(z.read(prefix+name)).hexdigest()==sha,'Digest mismatch in ZIP: '+name
-  assert any(n.endswith('/branding/BEACON_SEAL.svg') for n in names)
+  assert any(n.endswith('/branding/BEACON_SEAL.png') for n in names)
  print('PASS: public release safety and manifest membership: '+p.name)
