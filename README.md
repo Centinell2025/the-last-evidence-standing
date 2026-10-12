@@ -1,6 +1,6 @@
 # The Last Evidence Standing
 
-<p align="center"><img src="branding/BEACON_OFFICIAL.svg" alt="Beacon of the Eagle LLC editorial seal" width="155" /></p>
+<p align="center"><img src="branding/BEACON_SEAL.png" alt="Beacon of the Eagle LLC editorial seal" width="155" /></p>
 <p align="center"><strong>BEACON OF THE EAGLE LLC</strong> · <strong>CENTINELL SUITE DEFENSE</strong><br/>Original Synthetic DFIR Training Laboratory · Case 26-NB-0918</p>
 
 
@@ -16,7 +16,7 @@ At **fictional Northbridge Systems**, investigators confront a legitimate mainte
 
 ## Student start
 
-1. Obtain the student ZIP v1.5 from the author while GitHub binary upload is pending. Only use GitHub downloads once the binary upload is verified.
+1. **[Download the complete student ZIP](downloads/The-Last-Evidence-Standing-STUDENT.zip)** and extract it. This is the reviewed standalone learner distribution.
 2. Follow `docs/CASE_BRIEF.md`, `docs/EVIDENCE_HANDLING.md`, and [30 investigation tasks](questions/INVESTIGATION.md).
 3. Verify exhibit SHA-256 hashes and the detached Ed25519 signature before drawing conclusions.
 4. Keep original evidence immutable and report trace IDs and normalized UTC.
@@ -75,9 +75,14 @@ Read the [narrative](docs/SCENARIO_STORY.md), [network diagram](docs/NETWORK_DIA
 **Examiner-only:** deliver separately the private 30-answer worksheet, the screenshot-supported intended-path PDF and requirement matrix. They are not included in the GitHub-ready archive or the learner ZIP. Please do not publish challenge artifacts before the receiving editor authorizes public release.
 
 
-## Binary publication status
-Text-based material and synthetic logs are published. Binary exhibits, PDF and student ZIP must still be uploaded. **Do not submit as a complete GitHub download yet.** See [upload guide](docs/GITHUB_BINARY_UPLOAD.md). Instructor materials are excluded.
+## Download and verification
+
+- **[Student Evidence Package ZIP](downloads/The-Last-Evidence-Standing-STUDENT.zip)** — all 30 investigation questions and synthetic exhibits, no instructor answers.
+- **[Branded Student Dossier PDF](docs/THE_LAST_EVIDENCE_STANDING_STUDENT_DOSSIER.pdf)** — case briefing and workflow.
+- **[Official Beacon of the Eagle LLC emblem](branding/BEACON_SEAL.png)** — exact corporate source image.
+
+Nine original binary exhibits have been published and checked against their original Git blob identifiers. The repository and learner ZIP are self-contained. Run `python3 tools/verify_student.py`, `python3 tools/verify_witness_links.py`, `python3 tools/verify_network_consistency.py`, and `python3 -m unittest discover -s tests -v`. For the independent ZIP safety and completeness check, run `python3 tools/verify_release.py downloads/The-Last-Evidence-Standing-STUDENT.zip`. This publication has not undergone a blinded third-party difficulty assessment or HTB acceptance.
 
 
 ### Corporate image attribution
-The emblem above is the **official image supplied by Beacon of the Eagle LLC** (white eagle, lighthouse, ocean and gold ring). The original PNG is embedded losslessly in `branding/BEACON_OFFICIAL.svg` for display in this text-only GitHub publication. The complete v1.4 ZIP also contains the unchanged original `branding/BEACON_SEAL.png`.
+The emblem above is the **official image supplied by Beacon of the Eagle LLC** (white eagle, lighthouse, ocean and gold ring). The original unmodified PNG is published directly at `branding/BEACON_SEAL.png` and inside the student ZIP.
