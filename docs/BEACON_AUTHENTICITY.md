@@ -1,6 +1,6 @@
 # Beacon of the Eagle LLC — editorial publisher seal
 
-The original image supplied by the author, displayed losslessly in `branding/BEACON_OFFICIAL.svg`, and the student cover emblem identify the publishing organization **Beacon of the Eagle LLC** and the defensive research/training line **Centinell Suite Defense**.
+The linked `branding/BEACON_SEAL.png` and cover emblem identify the publishing organization **Beacon of the Eagle LLC** and the defensive research/training line **Centinell Suite Defense**.
 
 - **Authorship mark:** identifies the publisher of synthetic instructional material.
 - **Forensic exhibit verification:** performed separately with SHA-256 and a detached **simulated** Ed25519 witness signature.
