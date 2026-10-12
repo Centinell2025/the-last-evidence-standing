@@ -1,0 +1,39 @@
+name: Restore verified student evidence binaries
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.binary-seed/**'
+      - 'tools/restore_binary_assets.py'
+      - '.github/workflows/restore-binary-assets.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Restore only the nine allowlisted original binary exhibits
+        run: python3 tools/restore_binary_assets.py
+      - name: Verify forensic integrity and all 16 regression tests
+        run: |
+          python3 tools/verify_student.py
+          python3 tools/verify_witness_links.py
+          python3 tools/verify_network_consistency.py
+          python3 -m unittest discover -s tests -v
+          python3 tools/verify_release.py downloads/The-Last-Evidence-Standing-STUDENT.zip
+      - name: Publish the nine binary files on main
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f branding/BEACON_SEAL.png docs/NETWORK_DIAGRAM.png docs/THE_LAST_EVIDENCE_STANDING_STUDENT_DOSSIER.pdf \
+            downloads/The-Last-Evidence-Standing-STUDENT.zip evidence/artifacts/diag-bundle-0918.tgz \
+            evidence/network/selected_proxy_slice.pcap evidence/network/tls_inspection_body.bin \
+            evidence/vault/vault_index.sqlite evidence/vault/witness.sig
+          if ! git diff --cached --quiet; then
+            git commit -m 'Release verified student binary evidence assets v1.5'
+            git push origin HEAD:main
+          fi
