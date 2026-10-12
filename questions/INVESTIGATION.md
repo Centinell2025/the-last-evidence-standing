@@ -63,4 +63,4 @@ F. **Incident commander:** recommend containment, check that token revocation wa
 A completed optional report can use `docs/INVESTIGATION_REPORT_TEMPLATE.md` and should cite two independent sources per consequential conclusion. The signatures and hashes demonstrate local byte integrity **within the training assumptions**, not real-world event authenticity.
 
 ## Evidence-integrity checkpoint
-From the extracted root run `python3 tools/verify_student.py`, then inspect `docs/CLOCK_MODEL.csv`, and only afterward interpret event times. For independent OpenSSL, SHA-256 and SQLite commands consult `README_FIRST.md`. All evidence, domains, IPs and companies are simulated.
+From the extracted root run `python3 tools/verify_student.py`, then inspect `docs/CLOCK_MODEL.csv`, and only afterward interpret event times. For independent OpenSSL, SHA-256 and SQLite commands consult `docs/TOOL_ACCESS_GUIDE.md`. All evidence, domains, IPs and companies are simulated.
