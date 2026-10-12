@@ -1,4 +1,4 @@
-# Publish the remaining binary exhibits — v1.3
+# Publish the remaining binary exhibits — v1.4
 
 The public repository now includes the full text investigation, forensic CSVs, 30 questions, integrity manifest, validation tools, and the Beacon of the Eagle LLC SVG seal.
 
