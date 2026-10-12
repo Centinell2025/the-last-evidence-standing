@@ -1,0 +1,3 @@
+event_utc,revision,asset,trace_id,config_path,key,before,after,actor_claim,control_plane_status
+2026-09-18T01:24:26Z,cfg-188,nb-dfs-02,af-742c,/etc/nb-collector/forwarding.yml,forwarding.enabled,true,false,NB\svc_archive,accepted
+2026-09-18T01:30:11Z,cfg-189,nb-dfs-02,recovery-1,/etc/nb-collector/forwarding.yml,forwarding.enabled,false,true,NB\ir_oncall,accepted

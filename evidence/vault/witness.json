@@ -1,0 +1,46 @@
+{
+  "assertions": [
+    {
+      "digest": "183419d887c8b1f5165b52609c53a0313278b80fdb24268528515de5a2558e2a",
+      "observer": "nb-idp-01",
+      "observer_event_utc": "2026-09-18T01:14:50Z",
+      "ref": "tok-6f92",
+      "seq": 1
+    },
+    {
+      "digest": "245aa54460833d0e51f647888855f710e91e5981862aad3556a125715b2492e1",
+      "observer": "nb-dfs-02 remote audit replica",
+      "observer_event_utc": "2026-09-18T01:16:21Z",
+      "ref": "a-402",
+      "seq": 2
+    },
+    {
+      "digest": "245aa54460833d0e51f647888855f710e91e5981862aad3556a125715b2492e1",
+      "observer": "nb-proxy-01 inspection replica",
+      "observer_event_utc": "2026-09-18T01:20:12Z",
+      "ref": "req-6b42",
+      "seq": 3
+    },
+    {
+      "digest": "5484c07d674860fb4b3ce3294c2a3324db3ad3cdc77e44fe2f720b93079008e6",
+      "observer": "nb-collector-01 control plane",
+      "observer_event_utc": "2026-09-18T01:24:26Z",
+      "ref": "cfg-188",
+      "seq": 4
+    },
+    {
+      "digest": "1014dcc68374bccab6c9b31f2659c09170e395fbde995576621be61b2a64ddcb",
+      "observer": "nb-collector-01 control plane",
+      "observer_event_utc": "2026-09-18T01:24:29Z",
+      "ref": "pulse-13",
+      "seq": 5
+    }
+  ],
+  "case_id": "26-NB-0918",
+  "integrity_scope": "This signed record protects its own bytes; it cannot authenticate the human using a service principal.",
+  "issuer": "vault-seal-a01",
+  "issuer_asset": "nb-vault-01",
+  "schema_version": 1,
+  "sealed_utc": "2026-09-18T01:26:20Z",
+  "witness_id": "vw-0918-0081"
+}

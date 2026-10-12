@@ -1,0 +1,17 @@
+source_id,origin,file,collection_utc,trust_scope,limitations
+SRC-01,identity broker,evidence/identity/token_issuance.csv,2026-09-18T02:10:00Z,central broker events,Token issuance does not identify a human
+SRC-02,identity broker,evidence/identity/idp_sessions.csv,2026-09-18T02:10:10Z,central identity events,Device labels are client claims
+SRC-03,privileged jump host SIEM copy,evidence/host/jump_process.csv,2026-09-18T02:11:00Z,forwarded before source-side wipe,Host-reported time is offset by -43 seconds
+SRC-04,archive host SIEM partial,evidence/host/archive_audit.csv,2026-09-18T02:11:20Z,forwarded before collector gap,No complete local audit trail survives
+SRC-05,archive host FIM snapshot,evidence/host/file_integrity.csv,2026-09-18T02:12:00Z,pre/post scans,Not an unbroken recording
+SRC-06,HTTPS inspection gateway,evidence/network/proxy.csv,2026-09-18T02:13:00Z,gateway transaction metadata and payload digest,Gateway offset +92 seconds
+SRC-07,HTTPS inspection gateway,evidence/network/tls_inspection_body.bin,2026-09-18T02:13:10Z,decrypted request body retained by approved inspection policy,"Captures request bytes, not later human retrieval"
+SRC-08,network sensor,evidence/network/dns.csv,2026-09-18T02:14:00Z,passive DNS metadata,DNS alone cannot prove transmission
+SRC-09,firewall,evidence/network/firewall.csv,2026-09-18T02:14:10Z,egress flow counters,Counters are not content proof
+SRC-10,change board,evidence/change/approved_change.csv,2026-09-18T02:15:00Z,approved ticket export,The title alone cannot authorize an action
+SRC-11,telemetry control plane,evidence/telemetry/collector_health.csv,2026-09-18T02:15:10Z,external heartbeat,Missing heartbeat alone does not establish intent
+SRC-12,segmented vault,evidence/vault/witness.json,2026-09-18T02:16:00Z,Ed25519 signed snapshot of independent observers,Simulation key proves only snapshot integrity within the exercise
+SRC-13,packet sensor,evidence/network/selected_proxy_slice.pcap,2026-09-18T02:16:30Z,selected plaintext CONNECT view,No decrypted HTTPS body in pcap
+SRC-14,vault SQLite index,evidence/vault/vault_index.sqlite,2026-09-18T02:17:10Z,offline export of append index,Index is secondary to detached signature
+SRC-15,backup scheduler,evidence/change/backup_jobs.csv,2026-09-18T02:17:40Z,independent work orders,Routine job overlaps malicious activity
+SRC-16,archive host service config audit,evidence/telemetry/config_audit.csv,2026-09-18T02:18:00Z,central config revision events,Change initiator may be service principal

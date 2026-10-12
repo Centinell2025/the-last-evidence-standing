@@ -1,0 +1,6 @@
+custody_id,source_id,custodian,event_utc,action,seal_or_receipt,limitation
+COC-001,SRC-12,IR-analyst-01,2026-09-18T02:16:00Z,exported vault witness and index,vw-0918-0081,signed witness issued by fictional vault
+COC-002,SRC-06,IR-analyst-02,2026-09-18T02:13:00Z,exported proxy metadata,req-6b42,transaction metadata is a gateway assertion
+COC-003,SRC-07,IR-analyst-02,2026-09-18T02:13:10Z,exported inspected request body,245aa54460833d0e51f647888855f710e91e5981862aad3556a125715b2492e1,body custody is policy-specific
+COC-004,SRC-04,IR-analyst-01,2026-09-18T02:11:20Z,exported surviving pre-gap forwarded audit,a-401..a-404,source-side later modified
+COC-005,SRC-10,IR-analyst-03,2026-09-18T02:15:00Z,exported signed change-board view,CHG-2871,policy governs approved actions

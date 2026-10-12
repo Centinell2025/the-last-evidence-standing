@@ -1,0 +1,10 @@
+source,offset_ms,calibration_start_utc,calibration_end_utc,calibration_method,error_bound_ms
+nb-jump-03,-43000,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,500
+nb-proxy-01,92000,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,500
+nb-dfs-02,0,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,1000
+nb-idp-01,0,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,300
+nb-sensor-02,0,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,500
+nb-vault-01,0,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,150
+nb-fw-01,0,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,500
+nb-collector-01,0,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,1000
+nb-backup-01,0,2026-09-18T00:45:00Z,2026-09-18T02:05:00Z,independent NTP comparison,500

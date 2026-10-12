@@ -1,0 +1,8 @@
+{
+  "signature_alg": "Ed25519",
+  "signed_file": "witness.json",
+  "witness_sha256": "60a397d46cb1004e17edfaa29b25c08f12a1a7276e2c15cbcbed6a89f9235aa8",
+  "signature_file": "witness.sig",
+  "public_key_file": "vault_public.pem",
+  "vault_attestation": "synthetic private training witness, not a legal or external certificate authority"
+}

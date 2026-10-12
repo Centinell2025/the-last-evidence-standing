@@ -1,0 +1,7 @@
+observer_utc,source_asset,heartbeat_state,delivery_queue_depth,last_ingest_utc,sink,observer_id
+2026-09-18T01:22:00Z,nb-dfs-02,healthy,0,2026-09-18T01:21:59Z,nb-collector-01,pulse-11
+2026-09-18T01:24:28Z,nb-dfs-02,healthy,1,2026-09-18T01:24:27Z,nb-collector-01,pulse-12
+2026-09-18T01:24:29Z,nb-dfs-02,missing,6,2026-09-18T01:24:27Z,nb-collector-01,pulse-13
+2026-09-18T01:25:10Z,nb-dfs-02,missing,48,2026-09-18T01:24:27Z,nb-collector-01,pulse-14
+2026-09-18T01:26:08Z,nb-dfs-02,missing,99,2026-09-18T01:24:27Z,nb-collector-01,INC-26-0918-441
+2026-09-18T01:30:34Z,nb-dfs-02,healthy,0,2026-09-18T01:30:33Z,nb-collector-01,pulse-15
