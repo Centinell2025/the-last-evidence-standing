@@ -11,7 +11,7 @@ class ExhibitIntegrity(unittest.TestCase):
         actual={p.relative_to(R).as_posix() for p in (R/'evidence').rglob('*') if p.is_file()}
         self.assertLessEqual(actual,listed)
     def test_seal_not_in_binary_exhibits(self):
-        seal=(R/'branding/BEACON_SEAL.svg').read_bytes()
+        seal=(R/'branding/BEACON_SEAL.png').read_bytes()
         self.assertNotIn(seal,(R/'evidence/vault/witness.json').read_bytes())
     def test_expected_binary_signatures(self):
         self.assertTrue((R/'evidence/artifacts/diag-bundle-0918.tgz').read_bytes().startswith(b'\x1f\x8b'))
