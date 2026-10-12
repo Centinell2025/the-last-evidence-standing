@@ -20,7 +20,8 @@ for item in sys.argv[1:]:
   assert all(n.startswith(prefix) for n in names)
   if 'STUDENT' in p.name:
    content={n[len(prefix):] for n in names}
-   assert content==set(expected)|{'manifest/SHA256SUMS.txt'},f'Unlisted or absent student member: {content.symmetric_difference(set(expected)|{"manifest/SHA256SUMS.txt"})}'
+   assert content==set(expected)|{'manifest/SHA256SUMS.txt','README.md'},f'Unlisted or absent student member: {content.symmetric_difference(set(expected)|{"manifest/SHA256SUMS.txt"})}'
+   assert z.read(prefix+'README.md')==(R/'README.md').read_bytes(),'Student README not synchronized with repository README'
    assert z.read(prefix+'manifest/SHA256SUMS.txt')==(R/'manifest/SHA256SUMS.txt').read_bytes()
    for name, sha in expected.items():
     assert hashlib.sha256(z.read(prefix+name)).hexdigest()==sha,'Digest mismatch in ZIP: '+name
