@@ -1,0 +1,60 @@
+name: Publish HTB Password-Protected Student ZIP
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-htb-student.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release-student:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Confirm original student archive and manifest
+        run: |
+          python3 tools/verify_release.py downloads/The-Last-Evidence-Standing-STUDENT.zip
+          python3 -m unittest discover -s tests -v
+      - name: Encrypt the existing verified student archive for HTB submission
+        shell: bash
+        run: |
+          mkdir -p dist/learner
+          unzip -q downloads/The-Last-Evidence-Standing-STUDENT.zip -d dist/learner
+          cd dist/learner
+          zip -q -X -r -P hackthebox ../The-Last-Evidence-Standing-HTB-STUDENT.zip The-Last-Evidence-Standing
+          cd ../..
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile,hashlib
+          original=Path("downloads/The-Last-Evidence-Standing-STUDENT.zip")
+          protected=Path("dist/The-Last-Evidence-Standing-HTB-STUDENT.zip")
+          with zipfile.ZipFile(original) as src, zipfile.ZipFile(protected) as enc:
+              expected={n:src.read(n) for n in src.namelist() if not n.endswith("/")}
+              actual={n:enc.read(n,pwd=b"hackthebox") for n in enc.namelist() if not n.endswith("/")}
+              assert set(expected)==set(actual),(set(expected)^set(actual))
+              assert all(hashlib.sha256(expected[n]).digest()==hashlib.sha256(actual[n]).digest() for n in expected)
+              assert all((item.flag_bits & 1)!=0 for item in enc.infolist() if not item.is_dir())
+              assert enc.read("The-Last-Evidence-Standing/questions/INVESTIGATION.md",pwd=b"hackthebox")
+              forbidden=("instructor_private","answer_key","walkthrough","grader_secret")
+              assert not any(any(f in n.lower() for f in forbidden) for n in actual)
+          print("PASS: password-protected student ZIP, exact matching bytes, no private answer files")
+          PY
+      - name: Create public direct-download GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=last-evidence-standing-htb-student-v1
+          FILE=dist/The-Last-Evidence-Standing-HTB-STUDENT.zip
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$FILE" --clobber
+          else
+            gh release create "$TAG" "$FILE" \
+              --title "The Last Evidence Standing — HTB student archive" \
+              --notes "Fictional synthetic DFIR training case by Beacon of the Eagle LLC. HTB student ZIP password: hackthebox. No confidential solutions. Candidate Insane, not HTB approved." \
+              --latest=false
+          fi
+          gh release view "$TAG" --json url,assets
